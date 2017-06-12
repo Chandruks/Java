@@ -30,14 +30,20 @@ public class Only_One_Appears
 					break;
 				}
 			}
-			if(k!=0)
+			if(0<k)
 				tmp[i]="*";
 			k=0;
 		}
+		
 		for(i=0;i<size;i++)
 		{
 			if(!(tmp[i]).equals("*"))
+			{
+				k++;
 				System.out.println("Only onece appear in array: "+Integer.parseInt(tmp[i]));
+			}
 		}
+		if(k==0)
+			System.out.println("All element repeated");
 	}
 }
