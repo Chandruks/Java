@@ -1,0 +1,38 @@
+
+import java.util.*;
+
+class Arr_SubSet
+{
+    public static void main(String[] arg)
+    {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+        int count=0;
+        int[] A = new int[N];
+        int[] B = new int[M];
+        for(int i=0;i<N;i++)
+            A[i] = sc.nextInt();
+            
+        for(int i=0;i<M;i++)
+            B[i] = sc.nextInt();
+        
+        if((N>=M) && (1<= N)&&(N <= 1000000))
+        {
+            
+            for(int i=0;i<M;i++)
+            {
+               // System.out.print("Hi");
+                for(int j=0;j<N;j++)
+                {
+                if(B[i] == A[j])
+                    count++;
+                }
+            }
+            if(count == M)
+                System.out.print("YES");
+            else
+                System.out.print("NO");
+        }
+    }
+}
